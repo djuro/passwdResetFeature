@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Isobar task login page</title>
+  <style type="text/css">
+      .flash-danger {
+          color: maroon;
+      }
+      .flash-success {
+          color: #6d6;
+      }
+  </style>
+</head>
+
+<body>
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="flash-{{ label }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
+
+<p>&nbsp;</p>
+
+<form novalidate method="post" action="">
+    
+  {{ form_label(form.username)}} {{ form_widget(form.username) }} {{ form_errors(form.username)}}<br /><br />
+  {{ form_label(form.password)}} {{ form_widget(form.password) }} {{ form_errors(form.username)}}<br /><br />
+  
+  {{ form_widget(form._token)}}
+  
+  <button type="submit">Login</button>
+  </form>
+  <p>
+    <a href="{{ path('forgot_password') }}">Forgot password?</a>
+  </p>
+</body>
+</html>
