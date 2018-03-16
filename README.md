@@ -41,3 +41,51 @@ It is important that you set `base_url` parameter in `parameters.yml`. If you se
 E.g:
 `http://localhost/passwdReset/web/app_dev.php/login` 
 
+
+### Why I wrote it like this
+
+I have chosen Symfony 3 because I estimated that it would take me the less time to finish. Also, using a MVC framework makes it  much easier to write clear and consistently organized code. There is no need to develop or maintain low-level utilities such as autoloading, routing, or rendering controllers.
+
+The following files make my implementation:
+
+#### Presentation layer
+Controllers:
+
+  `AppBundle/Controller/UserAuthController.php`
+  
+  `AppBundle/Controller/AdminController.php`
+
+Form Component classes:
+
+  `AppBundle/Form/PasswordResetType.php`
+  
+  `AppBundle/Form/LoginType.php`
+  
+  `AppBundle/Form/Model/PasswordResetData.php`
+  
+Template views are in:
+
+  `AppBundle/Resources` directory.
+  
+#### Application layer
+
+  `AppBundle/Service/MailingService.php`
+
+  `AppBundle/Service/UserAuthService.php`
+
+  `AppBundle/Service/SecureUrlService.php`
+
+  `AppBundle/Service/UserService.php`
+  
+#### Business layer
+  
+  `AppBundle/Entity/User.php`
+
+#### Data access layer
+
+  `AppBundle/Service/UserRepositoryService.php`
+
+
+  
+
+
