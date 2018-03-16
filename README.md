@@ -36,7 +36,8 @@ The 3rd point works on most of the systems. As an alternative you can set the Ap
 It is important that you set `base_url` parameter in `parameters.yml`. If you set up a virtual host, the domain root should point to `.../passwdReset/web` directory.
 
 #### Application routes
-`/login` Displays a login form with a link for Password reset. Make sure you enter your e-mail in the User's record, and then proceed to reset password. The username is `jdoe`. 
+`/login` Displays a login form with a link for Password reset. Make sure you enter your e-mail during setup, in the User's record, and then proceed to reset password. The username is `jdoe`.
+`/logout` is available as well.
 
 E.g:
 `http://localhost/passwdReset/web/app_dev.php/login` 
@@ -49,13 +50,13 @@ I have chosen Symfony 3 because I estimated that it would take me the less time 
 The following files make my implementation:
 
 #### Presentation layer
-Controllers:
+###### Controllers:
 
   `AppBundle/Controller/UserAuthController.php`
   
   `AppBundle/Controller/AdminController.php`
 
-Form Component classes:
+###### Form Component classes:
 
   `AppBundle/Form/PasswordResetType.php`
   
@@ -63,7 +64,7 @@ Form Component classes:
   
   `AppBundle/Form/Model/PasswordResetData.php`
   
-Template views are in:
+###### Template views are in:
 
   `AppBundle/Resources` directory.
   
