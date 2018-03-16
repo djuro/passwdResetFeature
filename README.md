@@ -88,10 +88,10 @@ The following files make my implementation:
 
 ### Assumptions
 
-I assumed that app should have a basic authentication feature with at least one page behind security firewall. And that the process of resetting a password should have enough security so that it could not be easily compromised. I achieved that by supplying a unique hash string per each user, which would be used as part of a reset link.
+I assumed that app should have a basic authentication feature with at least one page behind security firewall. And that the process of resetting a password should have enough security so that it could not be easily compromised. I achieved that by supplying a unique hash string per each user, which would be used as a required part of the reset link.
 The link looks like this:
 
-`http://example.com/reset-password/58a8e4c3e0ea6a5e4552053dbdb254863e7fd733d4a6555d11f3ae65c4e997e8`
+`http://example.com/reset-password/58a8e4c30ea6a5e4552053dbdb254863e7dfd733d4a6555d11f3ae65c4e997e8`
 
 ### Alternatives
 It could have used flat PHP but it would be complicated and less secure.
