@@ -8,6 +8,10 @@ use Psr\Log\LoggerInterface;
 
 use \Exception;
 
+
+/**
+ * Contains a few methods for security checking.
+ */
 class UserService
 {
     
@@ -71,8 +75,4 @@ class UserService
         return hash(self::ALGO, $password) == $passwordHash ? TRUE: FALSE;
     }
     
-    public function checkResetHash($resetHash)
-    {
-        
-    }
 }
