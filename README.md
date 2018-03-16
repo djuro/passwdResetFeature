@@ -36,6 +36,7 @@ The 3rd point works on most of the systems. As an alternative you can set the Ap
 It is important that you set `base_url` parameter in `parameters.yml`. If you set up a virtual host, the domain root should point to `.../passwdReset/web` directory.
 
 #### Application routes
-`/login` Displays a login form with a link for Password reset. Make sure you enter your e-mail in the User's record, and then proceed to reset password. The username is `jdoe`.
+`/login` Displays a login form with a link for Password reset. Make sure you enter your e-mail in the User's record, and then proceed to reset password. The username is `jdoe`. E.g:
 
+`http://localhost/passwdReset/web/app_dev.php/login` 
 
