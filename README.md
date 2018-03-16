@@ -38,10 +38,10 @@ It is important that you set `base_url` parameter in `parameters.yml`. If you se
 #### Application routes
 `/login` Displays a login form with a link for Password reset. Make sure you enter your e-mail during setup, in the User's record, and then proceed to reset password. The username is `jdoe`.
 
-`/logout` is available as well.
-
 E.g:
 `http://localhost/passwdReset/web/app_dev.php/login` 
+
+`/logout` is available as well.
 
 
 ### Why I wrote it like this
