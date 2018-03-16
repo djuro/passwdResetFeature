@@ -37,6 +37,7 @@ It is important that you set `base_url` parameter in `parameters.yml`. If you se
 
 #### Application routes
 `/login` Displays a login form with a link for Password reset. Make sure you enter your e-mail during setup, in the User's record, and then proceed to reset password. The username is `jdoe`.
+
 `/logout` is available as well.
 
 E.g:
@@ -71,8 +72,6 @@ The following files make my implementation:
 #### Application layer
 
   `AppBundle/Service/MailingService.php`
-
-  `AppBundle/Service/UserAuthService.php`
 
   `AppBundle/Service/SecureUrlService.php`
 
